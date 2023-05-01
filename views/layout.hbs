@@ -10,7 +10,14 @@
   </head>
 
   <body>
+    {{#if currentUser}}
+      <p>Welcome {{currentUser.username}}!</p>
+      <a href="/main">Main</a>
+      <a href="/private">Private</a>
+    {{/if}}
+
     <a href="/signup">Signup</a>
+    <a href="/login">Login</a>
     {{{body}}}
 
     <script src="/js/script.js"></script>
